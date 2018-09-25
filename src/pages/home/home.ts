@@ -10,18 +10,19 @@ export class HomePage {
   items: any[];
 
   constructor(public navCtrl: NavController) {
-    this.items = [];
-    for(let i = 0; i < 10; i++) {
+
+    this.items =[];
+    for(let i=0; i<10; i++){
       this.items.push({
-        text: 'Item ' + i,
+        text: "Item" + i,
         id: i
       });
     }
   }
 
-  itemSelected(item) {
-    this.navCtrl.push(DetailPage, {
-      item: item
-    });
+   itemSelected(item){
+     this.navCtrl.push(DetailPage, {
+       item:item
+     });
   }
 }
